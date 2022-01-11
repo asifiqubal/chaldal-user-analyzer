@@ -21,7 +21,7 @@ interface FilterOptionProps {
     from:Date,
     to:Date,
     checkboxList:Array<CheckBoxData>
-    onSubmit:(data: any)=>void
+    onSubmit:(data: {to:Date, from: Date, checkboxList:Array<CheckBoxData>})=>void
 }
 function FilterOption({checkboxList,from,to,onSubmit}:FilterOptionProps) {
     const [cbData, UpdateCBData] = useState(checkboxList)
